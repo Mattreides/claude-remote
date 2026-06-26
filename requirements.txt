@@ -1,0 +1,4 @@
+# Verified current on PyPI, June 2026 — minimum floors, not hard pins.
+anthropic>=0.112.0
+python-telegram-bot>=22.8
+python-dotenv>=1.2.2

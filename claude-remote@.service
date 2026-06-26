@@ -1,0 +1,18 @@
+[Unit]
+Description=claude-remote — control Claude on your desktop via Telegram
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/home/%i/claude-remote
+ExecStart=/home/%i/claude-remote/venv/bin/python /home/%i/claude-remote/claude_remote.py
+Restart=on-failure
+RestartSec=5
+# Light hardening — Claude still runs as your user by design.
+NoNewPrivileges=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

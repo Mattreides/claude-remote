@@ -1,0 +1,15 @@
+# Secrets — never commit
+.env
+
+# Runtime
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.log
+.claude-remote/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
